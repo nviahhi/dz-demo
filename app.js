@@ -6,9 +6,10 @@ const array = [
 ];
 console.log(array);
 const set = new Set();
-const arrayUnique = array.map(function (elem) {
+const arrayModified = array.map(function (elem) {
 	  const id = elem.id;
 	  var foundElement = array.find((elem) => elem.id == id);
 	  set.add(foundElement);
 });
-console.log(set);
+const arrayUnique = Array.from(set);
+console.log(arrayUnique);
