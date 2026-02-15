@@ -1,5 +1,7 @@
 'use strict';
 
+console.log('test');
+
 class Character {
 
 	constructor (race, title, language) {
@@ -22,6 +24,7 @@ class Ork extends Character {
 
 	beats() {
 		return `${this.title} beats`;
+		
 	}
 
 
