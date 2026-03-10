@@ -20,8 +20,8 @@ async function race(promises) {
         });
         return wrapped;
       }); 
-    const all = await Promise.all(list);  
-    return all[0].value;    
+    const res = await Promise.race(list);  
+    return res.value;    
 };
 
 race(testPromises1).then(result => console.log(result));
